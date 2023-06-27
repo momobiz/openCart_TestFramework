@@ -46,13 +46,59 @@ public class RegisterAccountPage extends BasePage{
 		
 	}
 	public void checkReadAndAgreeCheckbox() {
-//		moveToWebElement(registerAccountLocators.continueButton);
+
 		selectCheckbox(registerAccountLocators.readAndAgreeCheckbox);
 	}
-	public AccountCreatedPage clickOnContinueButton() {
+	public void clickOnContinueButton() {
 		clickOn(registerAccountLocators.continueButton);
-		return new AccountCreatedPage();
 		
+		
+	}
+	public AccountCreatedPage generateAccountCreatedPage() {
+		return new AccountCreatedPage();
+	}
+	
+	public boolean WarningEmailAlreadyExistMessageIsDisplayed() {
+		return isDisplayed(registerAccountLocators.warningEmailAlreadyExist);
+	}
+	
+	public String getWarningEmailAlreadyExistMessage() {
+		String warning="";
+		try {
+			if(WarningEmailAlreadyExistMessageIsDisplayed()) {
+				warning=registerAccountLocators.warningEmailAlreadyExist.getText();
+			
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return warning;
+	}
+	
+	public boolean warningEmailValidityIsDisplayed() {
+		return isDisplayed(registerAccountLocators.warningEmailValidity);
+	}
+	public String getWarningEmailValidityMessage() {
+		return registerAccountLocators.warningEmailValidity.getText();
+	}
+	
+	public String getEmailLabelColor() {
+		return registerAccountLocators.emailLabel.getCssValue("color");
+	}
+	public boolean passwordMatchingMessageIsDisplayed() {
+		
+		return isDisplayed(registerAccountLocators.warningMatchingPassword);
+	}
+	public String getPasswordMatchingMessage() {
+		scrollDown(150);
+		return registerAccountLocators.warningMatchingPassword.getText();
+	}
+	public boolean privacyPolicyMessageIsDisplayed() {
+		return isDisplayed(registerAccountLocators.warningPrivacyPolicyMessage);
+	}
+	public String getPrivacyPolicyMessage() {
+		return registerAccountLocators.warningPrivacyPolicyMessage.getText();
 	}
 	
 	

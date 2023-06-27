@@ -2,8 +2,7 @@ package com.openCart_TestFramework.pages;
 
 import java.util.Arrays;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -16,7 +15,7 @@ public class Browser {
 	
 	static Browser browser;
 	static WebDriver driver;
-    Logger logger=LogManager.getLogger(Browser.class);
+    
 	
 	private Browser() {
 			
@@ -46,7 +45,7 @@ public class Browser {
 			driver=new FirefoxDriver();
 			break;
 		default:
-			logger.info("You have to choose firefox or chrome browser");
+			System.out.println("You have to choose firefox or chrome browser");
 			break;
 		
 			

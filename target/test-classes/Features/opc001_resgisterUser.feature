@@ -25,4 +25,78 @@ Feature: User registration
       | sheet1   | row   | 
       | Sheet1   |     1 | 
     
-     
+     @opc002_RegisterWithAnExistingAccount @opc002
+     Scenario Outline: Verify that a warning message is generated when user try to register with an existing email
+     	Given user launch browser from "<sheet>" throw <row>
+    	When  user open the website
+    	Then  Verify that the home page is visible
+    	When  user clicks on myAccount
+    	And   user clicks on Register
+    	Then Verify "Register Account" is visible
+    	When  user enters firstname, lastname, email,phone and password taken from "<sheet>" through <row>
+    	And  user subscribes in newsLetter "<sheet>" through <row>
+    	And  user clicks on Policy and privacy 
+    	And  user clicks on Continue 
+    	Then Verify warning that registration warning message "Warning: E-Mail Address is already registered!" is visible
+    
+    Examples: 
+      | sheet    | row   | 
+      | Sheet2   |     0 | 
+      
+    @opc003_RegisterUserWithInvalidEmail @opc003
+    Scenario Outline: Verify registration with invalid email
+      Given user launch browser from "<sheet>" throw <row>
+    	When  user open the website
+    	Then  Verify that the home page is visible
+    	When  user clicks on myAccount
+    	And   user clicks on Register
+    	Then Verify "Register Account" is visible
+    	When  user enters firstname, lastname, email,phone and password taken from "<sheet>" through <row>
+    	And  user subscribes in newsLetter "<sheet>" through <row>
+    	And  user clicks on Policy and privacy 
+    	And  user clicks on Continue 
+    	Then Verify invalidity email warning "E-Mail Address does not appear to be valid!" is visible
+      
+      Examples: 
+      | sheet    | row   | 
+      | Sheet3   |     0 | 
+      
+      @opc004_RegisterWithInvalidConfirmPassword @opc004
+      Scenario Outline: Verify registration with incorrect confirm password
+      
+      Given user launch browser from "<sheet>" throw <row>
+    	When  user open the website
+    	Then  Verify that the home page is visible
+    	When  user clicks on myAccount
+    	And   user clicks on Register
+    	Then Verify "Register Account" is visible
+    	When  user enters firstname, lastname, email,phone and password taken from "<sheet>" through <row>
+    	And  user subscribes in newsLetter "<sheet>" through <row>
+    	And  user clicks on Policy and privacy 
+    	And  user clicks on Continue
+    	Then Verify warning invalidity message "Password confirmation does not match password!" is visible
+      
+      Examples: 
+      | sheet    | row   | 
+      | Sheet4   |     1 | 
+      
+      @opc005_RegisterWithoutCheckingAgreeWithPrivacyPolicy @opc005
+      Scenario Outline: Verify registration without checking privacy policy checkboox
+      
+      Given user launch browser from "<sheet>" throw <row>
+    	When  user open the website
+    	Then  Verify that the home page is visible
+    	When  user clicks on myAccount
+    	And   user clicks on Register
+    	Then Verify "Register Account" is visible
+    	When  user enters firstname, lastname, email,phone and password taken from "<sheet>" through <row>
+    	And  user subscribes in newsLetter "<sheet>" through <row>   	
+    	And  user clicks on Continue
+    	Then Verify warning privacy policy "Warning: You must agree to the Privacy Policy!" is visible
+      
+      
+      
+       Examples: 
+      | sheet    | row   | 
+      | Sheet5   |     1 | 
+      

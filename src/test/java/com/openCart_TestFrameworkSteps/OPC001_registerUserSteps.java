@@ -1,7 +1,8 @@
 package com.openCart_TestFrameworkSteps;
 
-import org.apache.log4j.LogManager;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import com.openCart_TestFramework.pages.BasePage;
 import com.openCart_TestFramework.pages.HomePage;
@@ -19,7 +20,7 @@ public class OPC001_registerUserSteps extends BaseSteps {
 
 	public OPC001_registerUserSteps() {
 		super();
-		logger = LogManager.getLogger(OPC001_registerUserSteps.class);
+	
 
 	}
 
@@ -39,7 +40,8 @@ public class OPC001_registerUserSteps extends BaseSteps {
 
 	@Then("Verify that the home page is visible")
 	public void verify_that_the_home_page_is_visible() {
-		softAssert.assertTrue(homePage.headerComponent.logoIsVisible());
+		
+		Assert.assertTrue(homePage.headerComponent.logoIsVisible());
 
 	}
 
@@ -92,13 +94,18 @@ public class OPC001_registerUserSteps extends BaseSteps {
 
 	@When("user clicks on Continue")
 	public void user_clicks_on_Continue() {
-		accountCreatedPage = registerAccountPage.clickOnContinueButton();
+		
+		
+		 registerAccountPage.clickOnContinueButton();
+		 accountCreatedPage =registerAccountPage.generateAccountCreatedPage();
 	}
 
 	@Then("Verify that {string} is visible")
 	public void verify_that_is_visible(String ecpectedMessage) {
-		softAssert.assertTrue(accountCreatedPage.accountHasBeenCreatedTextIsDisplayed());
-		softAssert.assertEquals(accountCreatedPage.getAccountHasBeenCreatedText(), ecpectedMessage);
+		Assert.assertTrue(accountCreatedPage.accountHasBeenCreatedTextIsDisplayed());
+		Assert.assertEquals(accountCreatedPage.getAccountHasBeenCreatedText(), ecpectedMessage);
+		
+		
 	}
 
 	@When("user clicks on Continue to confirm his registration")
@@ -108,23 +115,72 @@ public class OPC001_registerUserSteps extends BaseSteps {
 
 	@Then("Verify that {string} is displayed")
 	public void verify_that_is_displayed(String expectedText) {
-		softAssert.assertTrue(myAccountPage.myAccountTextIsDisplayed());
-		softAssert.assertEquals(myAccountPage.getMyAccountText(), expectedText);
+		Assert.assertTrue(myAccountPage.myAccountTextIsDisplayed());
+		Assert.assertEquals(myAccountPage.getMyAccountText(), expectedText);
 		
 	}
 	@When("user clicks on Logout")
 	public void user_clicks_on_Logout() {
 	    accountLogoutPage= myAccountPage.logout();
+	   
 	}
 	@Then("Verify {string} is displayed")
 	public void verify_is_displayed(String expectedText) {
-	   softAssert.assertTrue(accountLogoutPage.accountLogoutTextIsDisplayed());
-	   softAssert.assertEquals(accountLogoutPage.getAccountLogoutText(), expectedText);
+	   Assert.assertTrue(accountLogoutPage.accountLogoutTextIsDisplayed());
+	   Assert.assertEquals(accountLogoutPage.getAccountLogoutText(), expectedText);
+	   
+	   
 	}
 	
 	@When("user clicks on Continue to confirm logout")
 	public void user_clicks_on_Continue_to_confirm_logout() {
 	    homePage=accountLogoutPage.clickOnContinue();
+	    
+	    
+	}
+	/**********************************************/
+	/****  Additional steps for scenario opc002 ***/
+	/**********************************************/
+	@Then("Verify warning that registration warning message {string} is visible")
+	public void verify_warning_that_registration_warning_message_is_visible(String expectedMessage) {
+		
+		String actualWarningMessage=registerAccountPage.getWarningEmailAlreadyExistMessage();
+		
+		Assert.assertTrue(registerAccountPage.WarningEmailAlreadyExistMessageIsDisplayed());
+		Assert.assertEquals(actualWarningMessage, expectedMessage);
+	    
+	}
+	/**********************************************/
+	/****  Additional steps for scenario opc003 ***/
+	/**********************************************/
+	@Then("Verify invalidity email warning {string} is visible")
+	public void verify_invalidity_email_warning_is_visible(String expectedWarning) {
+		
+		Assert.assertTrue(registerAccountPage.warningEmailValidityIsDisplayed());
+		Assert.assertEquals(registerAccountPage.getWarningEmailValidityMessage(),expectedWarning);
+	
+	    
+	}
+	/**********************************************/
+	/****  Additional steps for scenario opc004 ***/
+	/**********************************************/
+	
+	@Then("Verify warning invalidity message {string} is visible")
+	public void verify_warning_invalidity_message_is_visible(String expectedMessage) {
+	    
+		Assert.assertTrue(registerAccountPage.passwordMatchingMessageIsDisplayed());
+		Assert.assertEquals(registerAccountPage.getPasswordMatchingMessage(), expectedMessage);
+	  
+	}
+	/**********************************************/
+	/****  Additional steps for scenario opc005 ***/
+	/**********************************************/
+	
+	@Then("Verify warning privacy policy {string} is visible")
+	public void verify_warning_privacy_policy_is_visible(String expectedMessage) {
+		Assert.assertTrue(registerAccountPage.privacyPolicyMessageIsDisplayed());
+		Assert.assertEquals(registerAccountPage.getPrivacyPolicyMessage(), expectedMessage);
+	    
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.openCart_TestFrameworkSteps;
 
-import org.apache.log4j.Logger;
+
 import org.testng.asserts.SoftAssert;
 
 import com.openCart_TestFramework.pages.AccountCreatedPage;
@@ -12,7 +12,7 @@ import com.openCart_TestFramework.pages.RegisterAccountPage;
 public abstract class BaseSteps {
 	
 	public static SoftAssert softAssert;
-	public static Logger logger;
+
 	
 	public static HomePage homePage;
 	public static RegisterAccountPage registerAccountPage;

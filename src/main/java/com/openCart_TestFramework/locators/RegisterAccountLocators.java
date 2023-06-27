@@ -48,5 +48,25 @@ public class RegisterAccountLocators {
 	@FindBy(xpath="//input[@type='submit']")
 	public WebElement continueButton;
 	
+	@CacheLookup
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	public WebElement warningEmailAlreadyExist;
+	
+	@CacheLookup
+	@FindBy(xpath="//div[@class='text-danger']")
+	public WebElement warningEmailValidity;
+	
+	@CacheLookup
+	@FindBy(xpath="//label[contains(text(),'E-Mail')]")
+	public WebElement emailLabel;
+	
+	@CacheLookup
+	@FindBy(xpath="//div[@class='text-danger']")
+	public WebElement warningMatchingPassword;
+	
+	@CacheLookup
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	public WebElement warningPrivacyPolicyMessage;
+	
 
 }

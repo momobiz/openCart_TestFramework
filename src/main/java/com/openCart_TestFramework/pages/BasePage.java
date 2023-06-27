@@ -3,8 +3,7 @@ package com.openCart_TestFramework.pages;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +16,7 @@ public abstract class BasePage {
 	
 	public static WebDriver driver; 
 	public WebDriverWait wait;
-	public Logger logger=LogManager.getLogger(BasePage.class);
+	
 	public JavascriptExecutor js;
 	public Select select;
 	public Actions actions;
@@ -40,7 +39,7 @@ public abstract class BasePage {
 			
 			
 		} catch (Exception e) {
-			logger.info(e.getMessage());
+			System.out.println(e.getMessage());
 			return false;
 		}
 	
@@ -67,7 +66,7 @@ public abstract class BasePage {
 				
 				
 			} catch (Exception e) {
-				logger.warn(e.getMessage());;
+				System.out.println(e.getMessage());
 			}
 		}
 	
