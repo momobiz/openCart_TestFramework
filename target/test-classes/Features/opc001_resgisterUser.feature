@@ -2,7 +2,7 @@
 Feature: User registration
 
 
-  @Opc001_RegisterUser 
+  @Opc0011_RegisterUser @Opc0011
   Scenario Outline: Verify that user is successfully registred
     Given user launch browser from "<sheet1>" throw <row>
     When  user open the website
@@ -18,14 +18,14 @@ Feature: User registration
     When user clicks on Continue to confirm his registration
     Then Verify that "My Account" is displayed
     When user clicks on Logout
-    Then Verify "Account logout" is displayed
+    Then Verify "Account Logout" is displayed
     When user clicks on Continue to confirm logout
 
     Examples: 
       | sheet1   | row   | 
       | Sheet1   |     1 | 
     
-     @opc002_RegisterWithAnExistingAccount @opc002
+     @opc0012_RegisterWithAnExistingAccount @opc0012
      Scenario Outline: Verify that a warning message is generated when user try to register with an existing email
      	Given user launch browser from "<sheet>" throw <row>
     	When  user open the website
@@ -43,7 +43,7 @@ Feature: User registration
       | sheet    | row   | 
       | Sheet2   |     0 | 
       
-    @opc003_RegisterUserWithInvalidEmail @opc003
+    @opc0013_RegisterUserWithInvalidEmail @opc0013
     Scenario Outline: Verify registration with invalid email
       Given user launch browser from "<sheet>" throw <row>
     	When  user open the website
@@ -61,7 +61,7 @@ Feature: User registration
       | sheet    | row   | 
       | Sheet3   |     0 | 
       
-      @opc004_RegisterWithInvalidConfirmPassword @opc004
+      @opc0014_RegisterWithInvalidConfirmPassword @opc0014
       Scenario Outline: Verify registration with incorrect confirm password
       
       Given user launch browser from "<sheet>" throw <row>
@@ -80,7 +80,7 @@ Feature: User registration
       | sheet    | row   | 
       | Sheet4   |     1 | 
       
-      @opc005_RegisterWithoutCheckingAgreeWithPrivacyPolicy @opc005
+      @opc0015_RegisterWithoutCheckingAgreeWithPrivacyPolicy @opc0015
       Scenario Outline: Verify registration without checking privacy policy checkboox
       
       Given user launch browser from "<sheet>" throw <row>

@@ -30,5 +30,11 @@ public class HeaderComponent extends BasePage{
 		return isDisplayed(headerLocators.headerLogo);
 	}
 	
+	public LoginPage clickOnLogin() {
+		
+		clickOn(headerLocators.loginLink);
+		return new LoginPage();
+	}
+	
 
 }

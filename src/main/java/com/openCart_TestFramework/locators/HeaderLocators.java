@@ -18,5 +18,9 @@ public class HeaderLocators {
 	@FindBy(xpath="//a[@href='https://naveenautomationlabs.com/opencart/index.php?route=common/home']")
 	public WebElement headerLogo;
 	
+	@CacheLookup
+	@FindBy(xpath="//a[contains(text(),'Login')]")
+	public WebElement loginLink;
+	
 
 }

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 2 failed,   3 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify registration with incorrect confirm password&quot;, &quot;Optional[User registration]&quot;)">runScenario("Verify registration with incorrect confirm password", "Optional[User registration]")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that user is successfully registred&quot;, &quot;Optional[User registration]&quot;)">runScenario("Verify that user is successfully registred", "Optional[User registration]")</a> <!-- method navigator-link -->
@@ -121,7 +116,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that a warning message is generated when user try to register with an existing email&quot;, &quot;Opti...)">runScenario("Verify that a warning message is generated when user try to register with an existing email", "Opti...)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify registration with incorrect confirm password&quot;, &quot;Optional[User registration]&quot;)">runScenario("Verify registration with incorrect confirm password", "Optional[User registration]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Login user with valid credential&quot;, &quot;Optional[User login]&quot;)">runScenario("Login user with valid credential", "Optional[User login]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -132,6 +132,21 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify registration without checking privacy policy checkboox&quot;, &quot;Optional[User registration]&quot;)">runScenario("Verify registration without checking privacy policy checkboox", "Optional[User registration]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Login when user forgot his password&quot;, &quot;Optional[User login]&quot;)">runScenario("Login when user forgot his password", "Optional[User login]")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that a warning message is generated when user try to register with an existing email&quot;, &quot;Opti...)">runScenario("Verify that a warning message is generated when user try to register with an existing email", "Opti...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.RunnerTestFramework.Runner" class="method navigator-link" hash-for-method="runScenario(&quot;Login with invalid credentials&quot;, &quot;Optional[User login]&quot;)">runScenario("Login with invalid credentials", "Optional[User login]")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -152,75 +167,6 @@
               <span class="class-name">com.RunnerTestFramework.Runner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Verify registration with incorrect confirm password&quot;, &quot;Optional[User registration]&quot;)">
-                  </a> <!-- runScenario("Verify registration with incorrect confirm password", "Optional[User registration]") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify registration with incorrect confirm password", "Optional[User registration]")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;MOHAMEDALI&apos;, ip: &apos;192.168.1.114&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.16.1&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [712ff370-68f4-481a-9197-a50f087e9af7, get {url=https://naveenautomationlabs.com/opencart/}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 114.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230619081400, moz:debuggerAddress: 127.0.0.1:64683, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 11812, moz:profile: C:\Users\moham\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://127.0.0.1:64683/devtoo..., se:cdpVersion: 85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 712ff370-68f4-481a-9197-a50f087e9af7
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:72)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:328)
-	at com.openCart_TestFramework.pages.BasePage.openUrl(BasePage.java:31)
-	at com.openCart_TestFramework.pages.HomePage.&lt;init&gt;(HomePage.java:8)
-	at com.openCart_TestFrameworkSteps.OPC001_registerUserSteps.user_open_the_website(OPC001_registerUserSteps.java:37)
-	at ✽.user open the website(file:///C:/Users/moham/eclipse-workspace/openCart_TestFramework/src/test/resources/Features/opc001_resgisterUser.feature:68)
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
-	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:66)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:51)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:56)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:119)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:328)
-	at com.openCart_TestFramework.pages.BasePage.openUrl(BasePage.java:31)
-	at com.openCart_TestFramework.pages.HomePage.&lt;init&gt;(HomePage.java:8)
-	at com.openCart_TestFrameworkSteps.OPC001_registerUserSteps.user_open_the_website(OPC001_registerUserSteps.java:37)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:44)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:92)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:63)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:49)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:98)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:71)
-	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$0(TestNGCucumberRunner.java:115)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:131)
-	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:112)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:31)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 35 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="runScenario(&quot;Verify that user is successfully registred&quot;, &quot;Optional[User registration]&quot;)">
@@ -246,10 +192,20 @@ Caused by: java.util.concurrent.TimeoutException
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify that a warning message is generated when user try to register with an existing email&quot;, &quot;Opti...)">
-                  </a> <!-- runScenario("Verify that a warning message is generated when user try to register with an existing email", "Opti...) -->
+                  <a name="runScenario(&quot;Verify registration with incorrect confirm password&quot;, &quot;Optional[User registration]&quot;)">
+                  </a> <!-- runScenario("Verify registration with incorrect confirm password", "Optional[User registration]") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify that a warning message is generated when user try to register with an existing email", "Optional[User registration]")</span>
+                  <span class="parameters">("Verify registration with incorrect confirm password", "Optional[User registration]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login user with valid credential&quot;, &quot;Optional[User login]&quot;)">
+                  </a> <!-- runScenario("Login user with valid credential", "Optional[User login]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login user with valid credential", "Optional[User login]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -270,6 +226,36 @@ Caused by: java.util.concurrent.TimeoutException
                   </a> <!-- runScenario("Verify registration without checking privacy policy checkboox", "Optional[User registration]") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Verify registration without checking privacy policy checkboox", "Optional[User registration]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login when user forgot his password&quot;, &quot;Optional[User login]&quot;)">
+                  </a> <!-- runScenario("Login when user forgot his password", "Optional[User login]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login when user forgot his password", "Optional[User login]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Verify that a warning message is generated when user try to register with an existing email&quot;, &quot;Opti...)">
+                  </a> <!-- runScenario("Verify that a warning message is generated when user try to register with an existing email", "Opti...) -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Verify that a warning message is generated when user try to register with an existing email", "Optional[User registration]")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Login with invalid credentials&quot;, &quot;Optional[User login]&quot;)">
+                  </a> <!-- runScenario("Login with invalid credentials", "Optional[User login]") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Login with invalid credentials", "Optional[User login]")</span>
                   <em>
 (Runs Cucumber Scenarios)                  </em>
                 </div> <!-- method-content -->
@@ -336,32 +322,44 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'com.RunnerTestFramework.Runner')
-data.setCell(0, 3, 302924);
+data.setCell(0, 3, 33963);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'com.RunnerTestFramework.Runner')
-data.setCell(1, 3, 109931);
+data.setCell(1, 3, 29792);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'com.RunnerTestFramework.Runner')
-data.setCell(2, 3, 74329);
+data.setCell(2, 3, 17225);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'runScenario')
 data.setCell(3, 2, 'com.RunnerTestFramework.Runner')
-data.setCell(3, 3, 65263);
+data.setCell(3, 3, 16982);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'runScenario')
 data.setCell(4, 2, 'com.RunnerTestFramework.Runner')
-data.setCell(4, 3, 24690);
+data.setCell(4, 3, 11629);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'runScenario')
+data.setCell(5, 2, 'com.RunnerTestFramework.Runner')
+data.setCell(5, 3, 10096);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'runScenario')
+data.setCell(6, 2, 'com.RunnerTestFramework.Runner')
+data.setCell(6, 3, 9839);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'runScenario')
+data.setCell(7, 2, 'com.RunnerTestFramework.Runner')
+data.setCell(7, 3, 7395);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -396,29 +394,39 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Verify that user is successfully registred", "Optional[User registration]")</span>
-                <span class="method-start">271 ms</span>
+                <span class="method-start">266 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify that a warning message is generated when user try to register with an existing email", "Opti...)</span>
-                <span class="method-start">65543 ms</span>
+                <span class="method-start">34245 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify registration with invalid email", "Optional[User registration]")</span>
-                <span class="method-start">175476 ms</span>
+                <span class="method-start">51229 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Verify registration with incorrect confirm password", "Optional[User registration]")</span>
-                <span class="method-start">249806 ms</span>
+                <span class="method-start">58625 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">runScenario("Verify registration without checking privacy policy checkboox", "Optional[User registration]")</span>
-                <span class="method-start">552735 ms</span>
+                <span class="method-start">68725 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login user with valid credential", "Optional[User login]")</span>
+                <span class="method-start">85951 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login with invalid credentials", "Optional[User login]")</span>
+                <span class="method-start">97582 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">runScenario("Login when user forgot his password", "Optional[User login]")</span>
+                <span class="method-start">107423 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">577427 ms</span>
+                <span class="method-start">137220 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

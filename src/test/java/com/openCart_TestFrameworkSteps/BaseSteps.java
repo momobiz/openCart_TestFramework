@@ -5,7 +5,9 @@ import org.testng.asserts.SoftAssert;
 
 import com.openCart_TestFramework.pages.AccountCreatedPage;
 import com.openCart_TestFramework.pages.AccountLogoutPage;
+import com.openCart_TestFramework.pages.ForgotYourPasswordPage;
 import com.openCart_TestFramework.pages.HomePage;
+import com.openCart_TestFramework.pages.LoginPage;
 import com.openCart_TestFramework.pages.MyAccountPage;
 import com.openCart_TestFramework.pages.RegisterAccountPage;
 
@@ -19,6 +21,8 @@ public abstract class BaseSteps {
 	public static AccountCreatedPage accountCreatedPage;
 	public static MyAccountPage myAccountPage;
 	public static AccountLogoutPage accountLogoutPage;
+	public static LoginPage loginPage;
+	public static ForgotYourPasswordPage forgotYourPasswordPage;
 	
 	public BaseSteps() {
 		softAssert=new SoftAssert();

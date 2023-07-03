@@ -6,6 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features = "src/test/resources/Features",
 				     glue = "com/openCart_TestFrameworkSteps",
 				     plugin="io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"
+				     
 				   
 				    
 				     

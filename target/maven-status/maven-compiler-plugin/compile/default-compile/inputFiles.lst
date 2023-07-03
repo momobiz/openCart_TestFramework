@@ -1,5 +1,7 @@
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\locators\AccountLogoutLocators.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\HomePage.java
+C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\LoginPage.java
+C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\locators\LoginPageLocators.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\HeaderComponent.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\AccountLogoutPage.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\locators\AccountCreatedLocators.java
@@ -7,7 +9,9 @@ C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCa
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\BasePage.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\locators\HeaderLocators.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\MyAccountRightMenuComponent.java
+C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\ForgotYourPasswordPage.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\locators\MyAccountRightMenuLocators.java
+C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\locators\ForgotYourPasswordLocators.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\MyAccountPage.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\locators\RegisterAccountLocators.java
 C:\Users\moham\eclipse-workspace\openCart_TestFramework\src\main\java\com\openCart_TestFramework\pages\AccountCreatedPage.java
